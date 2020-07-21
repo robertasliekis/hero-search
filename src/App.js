@@ -1,26 +1,56 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Header from "./components/Header";
+import SideMenu from "./components/SideMenu";
+import MainContent from "./components/MainContent";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      inputValue: "hulk",
+      burgerInputValue: false
+    };
+    this.handleInputValue = this.handleInputValue.bind(this);
+    this.handleBurgerInputValue = this.handleBurgerInputValue.bind(this);
+    this.heroNameInputValue = this.heroNameInputValue.bind(this);
+    this.heroButtonClickedValue = this.heroButtonClickedValue.bind(this);
+  }
+
+  componentDidMount() {
+    fetch("https://gateway.marvel.com:443/v1/public/characters?apikey=88ebe414618afa23ec34c99800b6ca2d&limit=100&offset=0")
+      .then((response) => response.json())
+      .then((data) => {
+        //  console.log("new data");
+        // console.log(data.data.results);
+      });
+  }
+
+  handleInputValue(val) {
+    this.setState({ inputValue: val });
+  }
+
+  handleBurgerInputValue(val) {
+    this.setState({ burgerInputValue: val });
+  }
+
+  heroNameInputValue(val) {
+    this.setState({ inputValue: val });
+  }
+
+  heroButtonClickedValue(val) {
+    this.setState({ burgerInputValue: val });
+  }
+
+  render() {
+    return (
+      <div className="website-wrapper">
+        <Header handleInput={this.handleInputValue} handleBurgerInput={this.handleBurgerInputValue} burgerInputValue={this.state.burgerInputValue} />
+        <SideMenu burgerMenuInput={this.state.burgerInputValue} heroNameInput={this.heroNameInputValue} heroButtonClicked={this.heroButtonClickedValue} />
+        {this.state.inputValue !== "" ? <MainContent searchInput={this.state.inputValue} /> : null}
+      </div>
+    );
+  }
 }
 
 export default App;

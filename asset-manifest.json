@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/hero-search/static/css/main.2987f9f2.chunk.css",
-    "main.js": "/hero-search/static/js/main.a299824c.chunk.js",
-    "main.js.map": "/hero-search/static/js/main.a299824c.chunk.js.map",
+    "main.js": "/hero-search/static/js/main.cc0590d6.chunk.js",
+    "main.js.map": "/hero-search/static/js/main.cc0590d6.chunk.js.map",
     "runtime-main.js": "/hero-search/static/js/runtime-main.cc00b252.js",
     "runtime-main.js.map": "/hero-search/static/js/runtime-main.cc00b252.js.map",
     "static/js/2.42b06f48.chunk.js": "/hero-search/static/js/2.42b06f48.chunk.js",
     "static/js/2.42b06f48.chunk.js.map": "/hero-search/static/js/2.42b06f48.chunk.js.map",
     "index.html": "/hero-search/index.html",
-    "precache-manifest.1c9089d6f4b9be20b57cbf4c7c328331.js": "/hero-search/precache-manifest.1c9089d6f4b9be20b57cbf4c7c328331.js",
+    "precache-manifest.d975ef75ef3bdda49195adb84157f034.js": "/hero-search/precache-manifest.d975ef75ef3bdda49195adb84157f034.js",
     "service-worker.js": "/hero-search/service-worker.js",
     "static/css/main.2987f9f2.chunk.css.map": "/hero-search/static/css/main.2987f9f2.chunk.css.map",
     "static/js/2.42b06f48.chunk.js.LICENSE.txt": "/hero-search/static/js/2.42b06f48.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.cc00b252.js",
     "static/js/2.42b06f48.chunk.js",
     "static/css/main.2987f9f2.chunk.css",
-    "static/js/main.a299824c.chunk.js"
+    "static/js/main.cc0590d6.chunk.js"
   ]
 }

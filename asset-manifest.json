@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/hero-search/static/css/main.2987f9f2.chunk.css",
-    "main.js": "/hero-search/static/js/main.cc0590d6.chunk.js",
-    "main.js.map": "/hero-search/static/js/main.cc0590d6.chunk.js.map",
+    "main.css": "/hero-search/static/css/main.b97fd215.chunk.css",
+    "main.js": "/hero-search/static/js/main.4eb4e49e.chunk.js",
+    "main.js.map": "/hero-search/static/js/main.4eb4e49e.chunk.js.map",
     "runtime-main.js": "/hero-search/static/js/runtime-main.cc00b252.js",
     "runtime-main.js.map": "/hero-search/static/js/runtime-main.cc00b252.js.map",
     "static/js/2.42b06f48.chunk.js": "/hero-search/static/js/2.42b06f48.chunk.js",
     "static/js/2.42b06f48.chunk.js.map": "/hero-search/static/js/2.42b06f48.chunk.js.map",
     "index.html": "/hero-search/index.html",
-    "precache-manifest.d975ef75ef3bdda49195adb84157f034.js": "/hero-search/precache-manifest.d975ef75ef3bdda49195adb84157f034.js",
+    "precache-manifest.2a73bb6e2b2bdafe23af5116b8acec56.js": "/hero-search/precache-manifest.2a73bb6e2b2bdafe23af5116b8acec56.js",
     "service-worker.js": "/hero-search/service-worker.js",
-    "static/css/main.2987f9f2.chunk.css.map": "/hero-search/static/css/main.2987f9f2.chunk.css.map",
+    "static/css/main.b97fd215.chunk.css.map": "/hero-search/static/css/main.b97fd215.chunk.css.map",
     "static/js/2.42b06f48.chunk.js.LICENSE.txt": "/hero-search/static/js/2.42b06f48.chunk.js.LICENSE.txt",
     "static/media/index.css": "/hero-search/static/media/marvel-logo.a1409b3f.png"
   },
   "entrypoints": [
     "static/js/runtime-main.cc00b252.js",
     "static/js/2.42b06f48.chunk.js",
-    "static/css/main.2987f9f2.chunk.css",
-    "static/js/main.cc0590d6.chunk.js"
+    "static/css/main.b97fd215.chunk.css",
+    "static/js/main.4eb4e49e.chunk.js"
   ]
 }

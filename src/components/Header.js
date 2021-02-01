@@ -35,8 +35,10 @@ class Header extends React.Component {
     if (this.state.inputValue !== "") {
       this.props.handleInput(this.state.inputValue);
     }
-    const currentSearchBarState = this.state.searchBarOpen;
-    this.setState({ searchBarOpen: !currentSearchBarState });
+    if (window.outerWidth <= 768) {
+      const currentSearchBarState = this.state.searchBarOpen;
+      this.setState({ searchBarOpen: !currentSearchBarState });
+    }
   }
 
   handleClickBurger() {
@@ -48,13 +50,25 @@ class Header extends React.Component {
   render() {
     let burgerClassName = this.state.burgerClicked ? "burger-menu-clicked" : null;
     let inputFieldWidth = () => {
-      // if(window.outerWidth)
       if (window.outerWidth > 414) {
         return 20;
       } else if (window.outerWidth <= 414 && window.outerWidth > 320) {
         return 15;
       } else return 11.5;
     };
+
+    let windowWidthCheckInput = () => {
+      if (window.outerWidth <= 768) {
+        return this.state.searchBarOpen;
+      } else return true;
+    };
+
+    let windowWidthCheckLogo = () => {
+      if (window.outerWidth <= 768) {
+        return this.state.searchBarOpen;
+      } else return false;
+    };
+
     return (
       <div className="header">
         <div className={"burger-menu " + burgerClassName} onClick={this.handleClickBurger}>
@@ -62,7 +76,7 @@ class Header extends React.Component {
           <div className="line line2"></div>
           <div className="line line3"></div>
         </div>
-        <div className="logo-container" onClick={this.logoClicked} style={{ opacity: this.state.searchBarOpen ? 0 : 1 }}>
+        <div className="logo-container" onClick={this.logoClicked} style={{ opacity: windowWidthCheckLogo() ? 0 : 1 }}>
           <div className="logo-image"></div>
           <div className="logo-text">
             HERO <br /> SEARCH
@@ -76,9 +90,9 @@ class Header extends React.Component {
             className="input-field"
             value={this.state.inputValue || ""}
             onChange={this.onInputChange}
-            style={{ width: this.state.searchBarOpen ? `calc(${inputFieldWidth()}rem)` : 0, paddingLeft: this.state.searchBarOpen ? "1rem" : 0 }}
+            style={{ width: windowWidthCheckInput() ? `calc(${inputFieldWidth()}rem)` : 0, paddingLeft: windowWidthCheckInput() ? "1rem" : 0 }}
           />
-          <label htmlFor="input-field" className="button button-submit button-submit-search" onClick={this.hanldeSubmit} style={{ borderTopLeftRadius: this.state.searchBarOpen ? 0 : "1rem" }}>
+          <label htmlFor="input-field" className="button-submit button-submit-search" onClick={this.hanldeSubmit} style={{ borderTopLeftRadius: windowWidthCheckInput() ? 0 : "1rem" }}>
             <FontAwesomeIcon className="icon" icon={faSearch} />
           </label>
         </div>

@@ -110,14 +110,12 @@ class ComicsData extends React.Component {
       columnArray[columnArrayIndex].push([height[0]]);
     });
 
-    // console.log(columnArray);
-
     let columnSize = 0;
     columnArray.forEach((el, index) => {
       let newColumnSize = 0;
       el.forEach((height) => {
         let marginBottomPixels = 16;
-        let borderPixels = 12;
+        let borderPixels = 14;
         newColumnSize = newColumnSize + height[0][0] + marginBottomPixels + borderPixels;
       });
       if (newColumnSize > columnSize) {

@@ -32,6 +32,17 @@ body {
   width: 100%;
 }
 
+div {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
 @mixin dislayFlex {
   display: flex;
   justify-content: center;
@@ -145,6 +156,7 @@ body {
     .input-field {
       height: 100%;
       width: 20rem;
+      padding: 0;
       padding-left: 0.5rem;
       font-size: 1.2rem;
       outline: none;
@@ -232,6 +244,7 @@ body {
     margin-bottom: 2rem;
     font-size: 4rem;
     font-family: "Bangers", Helvetica, Sans-Serif;
+    letter-spacing: 0.2rem;
   }
 }
 
@@ -311,6 +324,7 @@ body {
     }
     .hero-name {
       font-family: "Bangers", Helvetica, Sans-Serif;
+      letter-spacing: 0.2rem;
       text-align: center;
       font-size: 4rem;
       margin-bottom: 1rem;
@@ -337,6 +351,7 @@ body {
   width: 100%;
   font-family: "Bangers", Helvetica, Sans-Serif;
   font-size: 4rem;
+  letter-spacing: 0.2rem;
   color: white;
   margin-top: 2rem;
   animation: 0.5s fade-in ease;
@@ -497,14 +512,6 @@ body {
     }
   }
 
-  .header {
-    .text-input {
-      .input-field {
-        padding: 0;
-      }
-    }
-  }
-
   .hero-wrapper {
     margin-top: 1rem;
     .container-title {
@@ -524,7 +531,7 @@ body {
   }
 
   .header {
-    height: 5rem;
+    height: 4rem;
     .logo-container {
       .logo-image {
         width: 6rem;
@@ -546,12 +553,18 @@ body {
   }
 
   .side-menu {
+    top: 4rem;
     width: 100%;
-  }
-
-  .side-menu {
-    top: 5rem;
-    height: calc(100% - 5rem);
+    height: calc(100% - 4rem);
+    padding: 1rem;
+    h1 {
+      font-size: 1.7rem;
+    }
+    .category-list {
+      .list-item {
+        font-size: 1.1rem;
+      }
+    }
   }
 
   .hero-wrapper {
@@ -561,11 +574,22 @@ body {
   .hero-comics-container {
     .hero-comic {
       width: 100%;
+      .comic-poster {
+        height: 25rem;
+      }
     }
   }
 
   .data-info-text {
+    flex-direction: column;
     justify-content: center;
+    .message-text {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .icon {
+      font-size: 5rem;
+    }
   }
 
   .hero-info-container {
@@ -573,7 +597,7 @@ body {
     width: 100%;
     height: auto;
     .hero-image {
-      height: 25rem;
+      height: 22rem;
       width: 100%;
       border-right: 6px solid black;
     }
@@ -612,7 +636,7 @@ body {
   .side-menu {
     padding: 1rem;
     .category-name {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
     .category-list {
       .list-item {

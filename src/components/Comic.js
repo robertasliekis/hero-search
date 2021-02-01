@@ -38,9 +38,7 @@ class Comic extends React.Component {
     const { childRef } = this.props;
 
     return (
-      // <a ref={childRef} href={comic.urls[0].url} className={`hero-comic hero-comic${index}`} style={{ animationDelay: `${1.5 + 0.1 * index}s` }}>
-      //<a ref={childRef} href={comic.urls[0].url} className={`hero-comic hero-comic${index}`}>
-      <div ref={childRef} className={`hero-comic hero-comic${index}`}>
+      <a ref={childRef} href={comic.urls[0].url} className={`hero-comic hero-comic${index}`} style={{ animationDelay: `${1.5 + 0.1 * index}s` }}>
         <div
           className={`comic-poster comic-poster${index}`}
           style={{ backgroundImage: `url(${comic.thumbnail.path}.${comic.thumbnail.extension})`, backgroundPosition: comic.thumbnail.path.includes("image_not_available") ? `left` : `center` }}
@@ -55,7 +53,7 @@ class Comic extends React.Component {
           {<DisplayInfoList listArray={charactersArray} className="characters" index={index} />}
           {<DisplayInfoList listArray={creatorsArray} className="creators" index={index} />}
         </div>
-      </div>
+      </a>
     );
   }
 }

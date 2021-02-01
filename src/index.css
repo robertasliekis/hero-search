@@ -32,6 +32,16 @@ body {
   width: 100%;
 }
 
+div {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
 .website-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -202,6 +212,7 @@ body {
 .header .text-input .input-field {
   height: 100%;
   width: 20rem;
+  padding: 0;
   padding-left: 0.5rem;
   font-size: 1.2rem;
   outline: none;
@@ -374,6 +385,7 @@ body {
   margin-bottom: 2rem;
   font-size: 4rem;
   font-family: "Bangers", Helvetica, Sans-Serif;
+  letter-spacing: 0.2rem;
 }
 
 .hero-comics-wrapper {
@@ -522,6 +534,7 @@ body {
 
 .hero-info-container .hero-description .hero-name {
   font-family: "Bangers", Helvetica, Sans-Serif;
+  letter-spacing: 0.2rem;
   text-align: center;
   font-size: 4rem;
   margin-bottom: 1rem;
@@ -570,6 +583,7 @@ body {
   width: 100%;
   font-family: "Bangers", Helvetica, Sans-Serif;
   font-size: 4rem;
+  letter-spacing: 0.2rem;
   color: white;
   margin-top: 2rem;
   -webkit-animation: 0.5s fade-in ease;
@@ -789,9 +803,6 @@ body {
   .hero-comics-container .hero-comic {
     width: calc((100% / 2) - 1rem);
   }
-  .header .text-input .input-field {
-    padding: 0;
-  }
   .hero-wrapper {
     margin-top: 1rem;
   }
@@ -809,7 +820,7 @@ body {
     padding-top: 5rem;
   }
   .header {
-    height: 5rem;
+    height: 4rem;
   }
   .header .logo-container .logo-image {
     width: 6rem;
@@ -837,11 +848,16 @@ body {
     width: 3rem;
   }
   .side-menu {
+    top: 4rem;
     width: 100%;
+    height: calc(100% - 4rem);
+    padding: 1rem;
   }
-  .side-menu {
-    top: 5rem;
-    height: calc(100% - 5rem);
+  .side-menu h1 {
+    font-size: 1.7rem;
+  }
+  .side-menu .category-list .list-item {
+    font-size: 1.1rem;
   }
   .hero-wrapper {
     -webkit-box-align: center;
@@ -851,10 +867,24 @@ body {
   .hero-comics-container .hero-comic {
     width: 100%;
   }
+  .hero-comics-container .hero-comic .comic-poster {
+    height: 25rem;
+  }
   .data-info-text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .data-info-text .message-text {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .data-info-text .icon {
+    font-size: 5rem;
   }
   .hero-info-container {
     display: -webkit-box;
@@ -874,7 +904,7 @@ body {
     height: auto;
   }
   .hero-info-container .hero-image {
-    height: 25rem;
+    height: 22rem;
     width: 100%;
     border-right: 6px solid black;
   }
@@ -923,7 +953,7 @@ body {
     padding: 1rem;
   }
   .side-menu .category-name {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   .side-menu .category-list .list-item {
     font-size: 1rem;

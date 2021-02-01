@@ -6,8 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { faExclamation } from "@fortawesome/free-solid-svg-icons";
 
-// class MainContent extends React.Component {
-//   render() {
+
 class MainContent extends React.Component {
   constructor(props) {
     super(props);
@@ -23,16 +22,6 @@ class MainContent extends React.Component {
     };
   }
 
-  /*componentDidMount() {
-    const apiKey = "88ebe414618afa23ec34c99800b6ca2d";
-    let characterName = "hlk";
-    const marvelUrl = "https://gateway.marvel.com:443/v1/public/characters";
-    const dataUrlHeroAbout = `${marvelUrl}?name=${characterName}&apikey=${apiKey}`;
-    fetch(dataUrlHeroAbout)
-      .then((response) => response.json())
-      .then((data) => (data.data.total > 0 ? this.setState({ heroAboutData: data.data, isLoadingAbout: false }) : null))
-      .catch((errorAbout) => this.setState({ errorAbout, isLoadingAbout: false }));
-  }*/
   componentDidMount() {
     this.fetchData();
   }
@@ -47,8 +36,8 @@ class MainContent extends React.Component {
   fetchData() {
     this.setState({ isLoadingAbout: true, isLoadingComics: true, errorAbout: false, errorComics: false });
 
-    // const apiKey = "88ebe414618afa23ec34c99800b6ca2d";
-    const apiKey = "233a44adf3f0c2e7cb6194d99ef03998";
+    const apiKey = "88ebe414618afa23ec34c99800b6ca2d";
+    // const apiKey = "233a44adf3f0c2e7cb6194d99ef03998";
     let characterName = this.props.searchInput;
 
     const marvelUrl = "https://gateway.marvel.com:443/v1/public/characters";
@@ -128,6 +117,6 @@ class MainContent extends React.Component {
     );
   }
 }
-//}
+
 
 export default MainContent;
